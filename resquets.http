@@ -1,0 +1,93 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1NTg5ODkyOSwiZXhwIjoxNjU1OTAyNTI5fQ.bHaKyYkI-CL-R82pcbySJJKWenFkF_MKY5wCbSmsjCI
+@host = http://localhost:3000
+
+### List all hosts
+
+GET {{host}}/hosts
+Authorization: bearer {{token}}
+
+### Create host
+
+POST {{host}}/hosts
+Content-Type: application/json
+Authorization: bearer {{token}}
+
+{
+  "name": "IFPB",
+  "address": "www.ifpb.edu.br"
+}
+
+### Update host
+
+PUT {{host}}/hosts/3
+Content-Type: application/json
+Authorization: bearer {{token}}
+
+{
+  "name": "Instituto Federal da Paraíba",
+  "address": "www.ifpb.edu.br"
+}
+
+### Delete host
+
+DELETE {{host}}/hosts/5
+Authorization: bearer {{token}}
+
+### Get time by host
+
+GET {{host}}/hosts/1/times
+Authorization: bearer {{token}}
+
+### List all users
+
+GET {{host}}/users
+Authorization: bearer {{token}}
+
+### Create user
+
+POST {{host}}/users
+Content-Type: application/json
+
+{
+  "name": "teste",
+  "email": "teste@email.com",
+  "password": "123"
+}
+
+### Update user
+
+PUT {{host}}/users/1
+Content-Type: application/json
+Authorization: bearer {{token}}
+
+{
+  "name": "test",
+  "email": "test@email.com",
+  "password": "12345678"
+}
+
+### Delete user
+
+DELETE {{host}}/users/1
+Authorization: bearer {{token}}"
+
+
+### Signin
+
+POST {{host}}/signin
+Content-Type: application/json
+
+{
+  "email": "test@email.com",
+  "password": "test"
+}
+
+### Signin
+
+POST {{host}}/signin
+Content-Type: application/json
+
+{
+  "email": "teste@email.com",
+  "password": "123"
+}
