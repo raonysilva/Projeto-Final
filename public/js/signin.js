@@ -32,7 +32,9 @@ function loadSigninSubmit() {
     if (auth) {
       Auth.signin(token);
     } else {
-      showToast('Error no login');
+      //showToast('Error no login');
+      document.querySelector( '[data-js="result"]' ).innerHTML = ("Senha ou Usuario Invalido");       
+
     }
   };
 }
